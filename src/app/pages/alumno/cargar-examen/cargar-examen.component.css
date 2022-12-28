@@ -1,0 +1,15 @@
+.example-header-image {
+    background-image: url('/assets/portapapeles.png');
+    background-size: cover;
+}
+/*
+.headerprueba{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px solid blue;
+    /*margin-top: 10px;
+    
+        
+}*/

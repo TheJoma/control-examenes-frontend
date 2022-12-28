@@ -1,0 +1,47 @@
+<mat-card style="margin-left: 10px;">
+    <h1>Detalles del perfil</h1>
+
+    <mat-card-content>
+        <div class="bootstrap-wrapper">
+            <div class="container">
+                
+                <div class="text-center">
+                    <img src="https://www.pngitem.com/pimgs/m/35-350426_profile-icon-png-default-profile-picture-png-transparent.png" alt="" class="profile-image">
+
+                    <h1 class="mt20">Bienvenido Administrador {{usuario.nombre}}</h1>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                        <table class="table text-center">
+                            <tr>
+                                <td>Username</td>
+                                <td>{{usuario.username}}</td>
+                            </tr>
+                            <tr>
+                                <td>Nombre</td>
+                                <td>{{usuario.nombre}}</td>
+                            </tr>
+                            <tr>
+                                <td>Apellido</td>
+                                <td>{{usuario.apellido}}</td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td>{{usuario.email}}</td>
+                            </tr>
+                            <tr>
+                                <td>Telefono</td>
+                                <td>{{usuario.telefono}}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <mat-card-actions class="text-center">
+            <button mat-raised-button (click) = "moveData(usuario)" color="primary">Actualizar</button>
+            <button mat-raised-button color="accent">Compartir</button>
+        </mat-card-actions>
+    </mat-card-content>
+</mat-card>

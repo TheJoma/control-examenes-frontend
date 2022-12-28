@@ -1,0 +1,20 @@
+<mat-card>
+    <mat-list>
+        <div mat-subheader>
+            Todos los Cursos
+        </div>
+
+        <mat-list-item *ngFor = "let c of curso">
+            <mat-icon mat-list-icon>category</mat-icon>
+            <div mat-line> {{c.name}}</div>
+            <div mat-line> {{c.descripcion}} </div>
+            <button mat-flat-button color = "primary" class="ml20" (click) = "moverCurso(c)">Actualizar</button>
+            <button mat-flat-button (click) = "eliminarCurso(c.id)" color = "warn" class="ml10" >Eliminar</button>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+    </mat-list>
+
+    <div class="container text-center mt20">
+        <button routerLink = "/admin/add-curso" mat-raised-button color="primary">Agregar Categoria</button>
+    </div>
+</mat-card>

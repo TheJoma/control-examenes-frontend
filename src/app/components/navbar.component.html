@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+    <a [routerLink]="''" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu_books</mat-icon>
+    </a>
+
+    <span>Sistema de Examenes</span>
+    <span class="example-spacer"></span>
+
+    <button  *ngIf = "isLoggedIn && nombre"
+    mat-button
+    style="margin-right: 10px"
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+    [routerLink] = "'/'+test+'/perfil/'+username"><mat-icon>account_circle</mat-icon> {{nombre}}
+    </button>
+
+    <a *ngIf = "isLoggedIn" (click) = "logOut()" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>exit_to_app</mat-icon>Salir
+    </a>
+
+</mat-toolbar>

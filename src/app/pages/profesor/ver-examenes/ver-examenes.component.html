@@ -1,0 +1,26 @@
+<mat-card class="mt10" *ngFor = 'let e of examenes'>
+    <mat-card-header>
+        <div class="example-header-image" mat-card-avatar></div>
+        <mat-card-title>{{e.titulo}}</mat-card-title>
+
+        <mat-card-subtitle>{{e.curso.name}}</mat-card-subtitle>
+
+        <mat-card-title>{{e.titulo}}</mat-card-title>        
+    </mat-card-header>
+
+    <mat-card-content>
+        <mat-card-actions>
+            <button mat-flat-button [routerLink] = "'/profesor/ver-preguntas/'+e.id+'/'+e.titulo" color = "primary">Preguntas</button>
+            <button mat-stroked-button color = "primary" class="ml20">Puntos Maximos : {{e.puntosMaximos}}</button>
+            <button mat-stroked-button color = "primary" class="ml20">Preguntas : {{e.numeroDePreguntas}}</button>
+            <button mat-flat-button (click) = "moverExamen(e)"  color = "primary" class="ml20">Actualizar</button>
+            <button mat-flat-button *ngIf = "e.activo == true" color = "primary" class="ml20">Estado : Activo </button>
+            <button mat-flat-button *ngIf = "e.activo != true" color = "accent" class="ml20">Estado : Desactivo </button>
+            <button mat-flat-button (click) = "eliminarExamen(e.id)" color = "warn" class="ml10" >Eliminar</button>
+        </mat-card-actions>
+    </mat-card-content>
+</mat-card>
+
+<div class="container text-center mt20">
+    <button  mat-raised-button routerLink = "/profesor/add-examen" color = "primary">Agregar Cuestionario</button>
+</div>

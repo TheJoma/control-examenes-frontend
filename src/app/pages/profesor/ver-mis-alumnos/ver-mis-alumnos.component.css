@@ -1,0 +1,25 @@
+table {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  th {
+    width: 10%;
+  }
+
+  .pointer {
+    cursor: pointer;
+  }
+
+  tr.example-element-row:not(.example-expanded-row):hover {
+    background: whitesmoke;
+  }
+  
+  tr.example-element-row:not(.example-expanded-row):active {
+    background: #efefef;
+  }
+
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+  }

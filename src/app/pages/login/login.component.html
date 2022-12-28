@@ -1,0 +1,37 @@
+<div class="bootstrap-wrapper">
+    <div class="container" >
+        <div class="row mt20">
+            <div class="col-md-6 offset-md-3">
+                <mat-card style="border-radius: 20px; box-shadow:  0px 0px 10px 0px blue;">
+                    <div class="container text-center">
+                        <img src="../../../assets/login.png" width="100" height="100">
+                    </div>
+
+                    <h1 class="text-center">Inicio de Session</h1>
+
+                    <form (ngSubmit) = "onLogin()" novalidate>
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Username or Email</mat-label>
+                            <input  name="username" [(ngModel)] = "login.username" required matInput placeholder="Digite su usuario">
+                            <mat-hint>Ingrese username o el email </mat-hint>
+                        </mat-form-field>
+
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Password</mat-label>
+                            <input  name="password" [(ngModel)] = "login.password" required type="password" matInput placeholder="Digite su password">
+                            <mat-hint>Ingrese el password </mat-hint>
+                        </mat-form-field>
+
+                        <br><br>
+
+                        <div class="container text-center">
+                            <button mat-raised-button color="primary">Iniciar Session</button>
+                            <button type="reset" style="margin-left: 20px;" mat-raised-button color="accent">Limpiar</button>
+                        </div>
+
+                    </form>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

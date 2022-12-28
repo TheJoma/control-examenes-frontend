@@ -1,0 +1,28 @@
+<mat-card *ngIf = "curso">
+    <h1 class="text-center">Actualizar Curso</h1>
+    <mat-card-content>
+        <div class="bootstrap-wrapper">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <form (ngSubmit) = "actualizarCurso()">
+                        <mat-form-field class="w100" appearance = "outline">
+                            <mat-label>Curso Nuevo</mat-label>
+                            <input required autofocus type="text" name="name" [(ngModel)] = "curso.name" matInput placeholder="Digite el nombre del curso">
+                        </mat-form-field>
+
+                        <mat-form-field class="w100" appearance = "outline">
+                            <mat-label>Descripcion</mat-label>
+                            <textarea  required name="descripcion" [(ngModel)] = "curso.descripcion" matInput placeholder="Digite la descripcion del curso" rows="15" ></textarea>
+                        </mat-form-field>
+
+                        <div class="container text-center mt15">
+                            <button mat-raised-button color="primary">Actualizar</button>
+                        </div>
+
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

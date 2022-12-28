@@ -1,0 +1,20 @@
+<mat-card>
+    <mat-action-list>
+        <div mat-subheader>Mis Cursos</div>
+
+        <button mat-list-item [routerLink] = "'/alumno/perfil/'+username">
+            <mat-icon mat-list-icon>account_circle</mat-icon>
+            Perfil
+        </button>
+
+        <button mat-list-item routerLink ="/alumno">
+            <mat-icon mat-list-icon >quiz</mat-icon>Examenes
+        </button>
+        
+
+        <button mat-list-item *ngFor = "let c of curso" [routerLink] = "'/alumno/curso/'+c.id">
+            <mat-icon mat-list-icon>collections_bookmark</mat-icon>{{c.name}}
+        </button>
+
+    </mat-action-list>
+</mat-card>

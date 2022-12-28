@@ -1,0 +1,50 @@
+<mat-card *ngIf= "usuario">
+    <h1 class="text-center">Actualizar Datos</h1>
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <form (ngSubmit) = "actualizarAlumno()">
+               
+                <mat-form-field class="w100" appearance = "outline">
+                    <mat-label>Nombre</mat-label>
+                    <input [(ngModel)] = "usuario.nombre"  required type="text" name="nombre" placeholder="Digite el nombre" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="w100" appearance = "outline">
+                    <mat-label>Apellido</mat-label>
+                    <input [(ngModel)] = "usuario.apellido"  required type="text" name="apellido" placeholder="Digite el apellido" matInput>
+                </mat-form-field>
+
+                <mat-form-field class="w100" appearance = "outline">
+                    <mat-label>Correo</mat-label>
+                    <input disabled [(ngModel)] = "usuario.email" required type="email" name="email" placeholder="Digite el email" matInput>
+                </mat-form-field>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <mat-form-field class="w100" appearance = "outline">
+                            <mat-label>Username</mat-label>
+                            <input disabled [(ngModel)] = "usuario.username"  required type="text" name="username" placeholder="Digite el username" matInput>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="col-md-6">
+                        <mat-form-field class="w100" appearance = "outline">
+                            <mat-label>Password</mat-label>
+                            <input  [(ngModel)] = "usuario.password" required type="password" name="password" placeholder="Digite el password" matInput>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <mat-form-field class="w100" appearance = "outline">
+                    <mat-label>Telefono</mat-label>
+                    <input [(ngModel)] = "usuario.telefono" required type="text" name="telefono" placeholder="Digite el telefono" matInput>
+                </mat-form-field>
+
+                <div class="container text-center">
+                    <button mat-raised-button color="primary">Guardar</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</mat-card>

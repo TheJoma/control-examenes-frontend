@@ -1,0 +1,50 @@
+<mat-card >
+    <mat-action-list>
+        <div mat-subheader>Menu</div>
+
+        <button  mat-list-item routerLink = "/admin">
+            <mat-icon mat-list-icon>home</mat-icon> 
+            Inicio
+        </button>
+
+        <button mat-list-item [routerLink] = "'/admin/perfil/'+username">
+            <mat-icon mat-list-icon>account_circle</mat-icon>
+            Perfil
+        </button>
+
+        <button mat-list-item routerLink = "/admin/ver-cursos">
+            <mat-icon mat-list-icon>collections_bookmark</mat-icon>
+            Cursos
+        </button>
+
+        <button mat-list-item routerLink = "/admin/add-curso">
+            <mat-icon mat-list-icon>add_circle</mat-icon>
+            Agregar Curso
+        </button>
+
+        <button mat-list-item routerLink = "/admin/ver-profesores">
+            <mat-icon mat-list-icon>list</mat-icon>
+            Profesores
+        </button>
+
+        <button mat-list-item routerLink = "/admin/add-profesor">
+            <mat-icon mat-list-icon>add_circle</mat-icon>
+            Agregar Profesor
+        </button>
+
+        <button mat-list-item routerLink = "/admin/ver-alumnos">
+            <mat-icon mat-list-icon>list</mat-icon>
+            Alumnos
+        </button>
+
+        <button mat-list-item routerLink = "/admin/add-alumno">
+            <mat-icon mat-list-icon>add_circle</mat-icon>
+            Agregar Alumnos
+        </button>
+
+        <button mat-list-item  (click) = "logOut()" >
+            <mat-icon mat-list-icon>logout</mat-icon>
+            Salir
+        </button>
+    </mat-action-list>
+</mat-card>
