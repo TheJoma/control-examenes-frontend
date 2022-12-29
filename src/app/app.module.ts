@@ -61,7 +61,7 @@ import {ActualizarPerfilAdminComponent} from './pages/admin/actualizar-perfil-ad
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { ActualizarProfesorAlumnoComponent } from './pages/admin/actualizar-profesor-alumno/actualizar-profesor-alumno.component';
 import { NgxUiLoaderModule } from 'ngx-ui-loader';
-import { NgxUiLoaderHttpModule } from 'ngx-ui-loader/public-api';
+import { NgxUiLoaderHttpModule } from 'ngx-ui-loader';
 
 @NgModule({
   declarations: [
